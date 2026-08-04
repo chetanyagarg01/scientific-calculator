@@ -50,9 +50,9 @@ while ch == 1:
     elif choice == '13':
         b = functions.prime(a) 
         if b == 0: 
-            print(a, "is not a prime number")
-        elif b == 1: 
             print(a, "is a prime number")
+        elif b == 1: 
+            print(a, "is not a prime number")
     else:
         print("Invalid input")
     ch = int(input("Do you want to perform another calculation? (1 for Yes / 0 for No): "))
