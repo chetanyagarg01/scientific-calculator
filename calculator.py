@@ -1,9 +1,9 @@
 import functions
 ch=1
 while ch == 1: 
-    print("Select operation: \n 1. Addition \n 2. Subtraction \n 3. Multiplication \n 4. Division \n 5. Exponentiation \n 6. Logarithm \n 7. Square Root \n 8. Factorial \n 9. Trigonometric Functions \n 10. Percentage \n 11. Permutation \n 12. Combination" )
-    choice = input("Enter choice (1/2/3/4/5/6/7/8/9/10/11/12): ")
-    if choice not in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']: 
+    print("Select operation: \n 1. Addition \n 2. Subtraction \n 3. Multiplication \n 4. Division \n 5. Exponentiation \n 6. Logarithm \n 7. Square Root \n 8. Factorial \n 9. Trigonometric Functions \n 10. Percentage \n 11. Permutation \n 12. Combination \n 13. Prime Number" )
+    choice = input("Enter choice (1/2/3/4/5/6/7/8/9/10/11/12/13): ")
+    if choice not in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13']: 
         print("Invalid input")
         continue
     if choice in ['1', '2', '3', '4']:
@@ -12,7 +12,7 @@ while ch == 1:
     elif choice in ['5', '6']:
         a = float(input("Enter main number: "))
         b = float(input("Enter power/base number: "))
-    elif choice in ['7', '8']:
+    elif choice in ['7', '8', '13']:
         a = float(input("Enter number: "))
     elif choice == '9': 
         a = input("Enter trigonometric function (sin/cos/tan): ").strip().lower()
@@ -47,6 +47,12 @@ while ch == 1:
         print (functions.perm(a, b))    
     elif choice == '12':
         print (functions.comb(a, b))
+    elif choice == '13':
+        b = functions.prime(a) 
+        if b == 0: 
+            print(a, "is not a prime number")
+        elif b == 1: 
+            print(a, "is a prime number")
     else:
         print("Invalid input")
     ch = int(input("Do you want to perform another calculation? (1 for Yes / 0 for No): "))
