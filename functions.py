@@ -60,3 +60,13 @@ def comb(a, b):
         return math.factorial(a) / (math.factorial(b) * math.factorial(a - b))
     else:
         return "Error! Invalid values for combination."
+def prime(a): 
+    b = 0
+    if a > 1: 
+        for i in range ( 2, int(a/2) + 1): 
+            if (a % i) == 0: 
+                b = 1
+                break
+    if a <= 1:
+        print("Error! Number must be greater than 1.")
+    return b 
